@@ -1,0 +1,192 @@
+<html>
+<head>
+ <meta charset="UTF-8"> 
+<title> VSAU eSports </title>
+<script type="text/javascript">
+var lastResFind=""; // последний удачный результат
+var copy_page=""; // копия страницы в ихсодном виде
+function TrimStr(s) {
+     s = s.replace( /^\s+/g, '');
+  return s.replace( /\s+$/g, '');
+}
+function FindOnPage(inputId) {//ищет текст на странице, в параметр передается ID поля для ввода
+  var obj = window.document.getElementById(inputId);
+  var textToFind;
+ 
+  if (obj) {
+    textToFind = TrimStr(obj.value);//обрезаем пробелы
+  } else {
+    alert("Введенная фраза не найдена");
+    return;
+  }
+  if (textToFind == "") {
+    alert("Вы ничего не ввели");
+    return;
+  }
+ 
+  if(document.body.innerHTML.indexOf(textToFind)=="-1")
+  alert("Ничего не найдено, проверьте правильность ввода!");
+ 
+  if(copy_page.length>0)
+        document.body.innerHTML=copy_page;
+  else copy_page=document.body.innerHTML;
+
+ 
+  document.body.innerHTML = document.body.innerHTML.replace(eval("/name="+lastResFind+"/gi")," ");//стираем предыдущие якори для скрола
+  document.body.innerHTML = document.body.innerHTML.replace(eval("/"+textToFind+"/gi"),"<a name="+textToFind+" style='background:red'>"+textToFind+"</a>"); //Заменяем найденный текст ссылками с якорем;
+  lastResFind=textToFind; // сохраняем фразу для поиска, чтобы в дальнейшем по ней стереть все ссылки
+  window.location = '#'+textToFind;//перемещаем скрол к последнему найденному совпадению
+ }
+</script>
+<style>
+.p {
+  font-family: 'Arial', 'Verdana', sans-serif;
+  font-size: 21px;
+}
+.small-caps {
+  font-variant: small-caps;
+}
+.italic {
+  font-style: italic;
+}
+ nav{
+  padding: 16px 0;
+  background-color: blue;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  margin-left: 30px;
+  text-transform: uppercase;
+  color:white
+}
+nav ul li:first-child {
+  margin-left: 0px;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.vsaue2 {
+    height: 150px; 
+    background: url(vsaue2.png) bottom center no-repeat;
+    background-size: contain;
+}	
+.mf {
+    height: 650px; 
+    background: url(mf.jpg) bottom center no-repeat;
+    background-size: contain;
+}	
+.sobr {
+    height: 650px; 
+    background: url(sobr.jpg) bottom center no-repeat;
+    background-size: contain;
+}	
+.pl {
+    height: 550px; 
+    background: url(pl.jpg) bottom center no-repeat;
+    background-size: contain;
+}	
+.win {
+    height: 550px; 
+    background: url(win.jpg) bottom center no-repeat;
+    background-size: contain;
+}	
+</style>
+<div><a target="str2" href="C:/Users/user/Desktop/vsauEsports/vsauesports.html"><img src="vsaue.png" height="160" weight="180" style="position: fixed; left:0; z-index:500;"></div></a>
+<div><a target="str2" href="http://www.vsau.ru/"><img src="vsau.png" height="160" weight="180" style="position: fixed; right:0; z-index:500;"></div></a>
+</head>
+<p class="small-caps"><h1 align="center"><font color="blue" size=7> VSAU eSports | Киберспорт в аграрном </font></h1></p>
+
+
+<p class="small-caps" align="center">
+<nav>
+    <ul>
+      <li><a href="C:/Users/user/Desktop/vsauEsports/vsauesports.html">Главная</a></li>
+      <li><a href="C:/Users/user/Desktop/vsauEsports/oklube.html">О клубе</a></li>
+	  <li><a href="C:/Users/user/Desktop/vsauEsports/novosti.html">Новости</a></li>
+	  <li><a HREF="C:/Users/user/Desktop/vsauEsports/sostavi.html">Составы<li></a>
+	  <li><a href="C:/Users/user/Desktop/vsauEsports/kont.html">Контакты</li></a>
+    </ul>
+  </nav>
+</p>
+<p class="italic" align="center"><font color="blue">
+<h2>Поиск</h2>
+<input type="text" id="text-to-find" value="">
+<input type="button" onclick="javascript: FindOnPage('text-to-find'); return false;" value="Искать"/>
+<br/><i>Введите слово или фразу для поиска.</i>
+</p>
+<div class="mf">
+</div>
+<h3><font color="blue">
+<p class="italic" align="center">
+МЕЖФАКУЛЬТЕТСКИЙ КИБЕРСПОРТИВНЫЙ ТУРНИР<br>
+Мы рады сообщить об открытии регистрации на очередной сезон нашего проекта<br>
+Регистрация пройдёт до 11.11 23:59 а 12.11 мы опубликуем группы и начнем наш турнир<br>
+ОБЯЗАТЕЛЬНОЕ УСЛОВИЕ - все игроки команды должны быть с одного факультета!<br>
+Скорее заполняй <a target="str3" href="https://forms.yandex.ru/u/67292ef9d0468843be29f30f/" style="color: blue">ЗАЯВКУ</a>, ведь мы ждём именно тебя!<br>
+<hr width="450" color="blue" align="center">
+<div class="sobr">
+</div>
+<p class="italic" align="center">
+НОВЫЙ УЧЕБНЫЙ ГОД, НОВЫЕ ЛЮДИ💥<br>
+Всем привет, на связи киберспорт Аграрного!<br>
+Если ты<br>
+-целеустремленный<br>
+-голодный до побед<br>
+-мастер своего дела<br>
+То тебе обязательно к нам!<br>
+26 сентября в 17:00 состоится собрание киберспортивного клуба,<br> на котором ты узнаешь:<br>
+-все тонкости студенческого компьютерного спорта<br>
+-пообщаешься с уже "старичками" нашей организации<br>
+-узнаешь подробности о предстоящем турнире<br>
+-найдёшь себе единомышленников<br>
+Обязательно приходи, если хочешь попробовать свои силы<br> на региональной и всероссийской киберспортивной арене<br>
+До встречи!<br>
+</p>
+<hr width="450" color="blue" align="center">
+<div class="pl">
+</div>
+<p class="italic" align="center">
+ЗАКАНЧИВАЕМ НАШ ПУТЬ НА ВКСЛ 2024🎮<br>
+31 марта закончился зональный этап<br>Всеросскийской киберспортивной студенческой лиги<br> и мы решаем подвести итоги:<br>
+К сожалению, второй состав по дисциплине CS 2 не прошёл в стадию плей-офф,<br> но для ребят это первый крупный турнир, есть куда расти.<br>
+Состав по Dota 2 был в шаге от выхода в финалы, но к сожалению остались в этапе плей-офф<br>
+Но не время расстраиваться<br>
+СБОРНАЯ ВГАУ 1 забирает БРОНЗУ ВКСЛ 2024.<br> Ребята большие молодцы!<br> В каждом сыгранном ими турнире они приносят университету всё больше наград!<br>
+В общекомандном зачёте ВГАУ занимает седьмое место.<br>
+Спасибо за поддержку, увидимся на следующем турнире!<br>
+</p>
+<hr width="450" color="blue" align="center"><br>
+<p align="center">
+<video width="520" height="540" controls>
+  <source src="vid.mp4" type="video/mp4">
+</video>
+</p>
+<p class="italic" align="center">
+ТРЕНИРОВОЧНЫЙ ПРОЦЕСС🔫<br>
+Остается неделя до ВКСЛ,<br> хотим немного поделиться с вами нашими внутряками!
+</p>
+<hr width="450" color="blue" align="center">
+<div class="win">
+</div>
+<p class="italic" align="center">
+Они сделали это — Воронежский ГАУ забрали первое место на турнире<br> "Кибер Аграрный 2023" по CS2,<br> пройдя по всей сетке без единого поражения.<br>
+Напомним, что в финале сражались команды<br> Воронежского ГАУ и Кузбасского ГАУ —<br> на кону стояло звание <br>"Самого Аграрного ВУЗа России"<br>
+Поздравляем ВГАУ с победой на турнире,<br> желаем в новом году показать еще более высокий уровень кс.
+</p>
+<hr width="450" color="blue" align="center">
+<div class="vsaue2">
+</div>
+</p>
+<div clacc="nv">
+<p>
+</div>
+</body>
+
+</html>

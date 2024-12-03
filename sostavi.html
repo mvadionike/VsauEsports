@@ -1,0 +1,192 @@
+<html>
+<head>
+ <meta charset="UTF-8"> 
+<title> VSAU eSports </title>
+<script type="text/javascript">
+var lastResFind=""; // последний удачный результат
+var copy_page=""; // копия страницы в ихсодном виде
+function TrimStr(s) {
+     s = s.replace( /^\s+/g, '');
+  return s.replace( /\s+$/g, '');
+}
+function FindOnPage(inputId) {//ищет текст на странице, в параметр передается ID поля для ввода
+  var obj = window.document.getElementById(inputId);
+  var textToFind;
+ 
+  if (obj) {
+    textToFind = TrimStr(obj.value);//обрезаем пробелы
+  } else {
+    alert("Введенная фраза не найдена");
+    return;
+  }
+  if (textToFind == "") {
+    alert("Вы ничего не ввели");
+    return;
+  }
+ 
+  if(document.body.innerHTML.indexOf(textToFind)=="-1")
+  alert("Ничего не найдено, проверьте правильность ввода!");
+ 
+  if(copy_page.length>0)
+        document.body.innerHTML=copy_page;
+  else copy_page=document.body.innerHTML;
+
+ 
+  document.body.innerHTML = document.body.innerHTML.replace(eval("/name="+lastResFind+"/gi")," ");//стираем предыдущие якори для скрола
+  document.body.innerHTML = document.body.innerHTML.replace(eval("/"+textToFind+"/gi"),"<a name="+textToFind+" style='background:red'>"+textToFind+"</a>"); //Заменяем найденный текст ссылками с якорем;
+  lastResFind=textToFind; // сохраняем фразу для поиска, чтобы в дальнейшем по ней стереть все ссылки
+  window.location = '#'+textToFind;//перемещаем скрол к последнему найденному совпадению
+ }
+</script>
+<style>
+.p {
+  font-family: 'Arial', 'Verdana', sans-serif;
+  font-size: 21px;
+}
+.small-caps {
+  font-variant: small-caps;
+}
+.italic {
+  font-style: italic;
+}
+ nav{
+  padding: 16px 0;
+  background-color: blue;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  margin-left: 30px;
+  text-transform: uppercase;
+  color:white
+}
+nav ul li:first-child {
+  margin-left: 0px;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.vsaue2 {
+    height: 150px; 
+    background: url(vsaue2.png) bottom center no-repeat;
+    background-size: contain;
+}	
+.cs2 {
+	height: 100px; 
+    background: url(cs2.png) bottom center no-repeat;
+    background-size: contain;
+}
+.dota2 {
+	height: 100px; 
+    background: url(dota2.png) bottom center no-repeat;
+    background-size: contain;
+}
+.pervirg {
+	height: 400px; 
+    background: url(1igr.jpg) bottom center no-repeat;
+    background-size: contain;
+}
+.vtirg {
+	height: 400px; 
+    background: url(2igr.jpg) bottom center no-repeat;
+    background-size: contain;
+}
+.trirg {
+	height: 400px; 
+    background: url(3igr.jpg) bottom center no-repeat;
+    background-size: contain;
+}
+.chtirg {
+	height: 400px; 
+    background: url(4igr.jpg) bottom center no-repeat;
+    background-size: contain;
+}
+.ptirg {
+	height: 400px; 
+    background: url(5igr.jpg) bottom center no-repeat;
+    background-size: contain;
+}
+
+</style>
+<div><a target="str2" href="vsauesports.html"><img src="vsaue.png" height="160" weight="180" style="position: fixed; left:0; z-index:500;"></div></a>
+<div><a target="str2" href="http://www.vsau.ru/"><img src="vsau.png" height="160" weight="180" style="position: fixed; right:0; z-index:500;"></div></a>
+</head>
+<h1 align="center"><font color="blue" size=7> VSAU eSports | Киберспорт в аграрном </font></h1>
+
+<p class="small-caps" align="center">
+<nav>
+    <ul>
+      <li><a href="vsauesports.html">Главная</a></li>
+      <li><a href="oklube.html">О клубе</a></li>
+	  <li><a href="novosti.html">Новости</a></li>
+	  <li><a HREF="sostavi.html">Составы<li></a>
+	  <li><a href="kont.html">Контакты</li></a>
+    </ul>
+  </nav>
+</p>
+<p class="italic" align="center"><font color="blue">
+<h2>Поиск</h2>
+<input type="text" id="text-to-find" value="">
+<input type="button" onclick="javascript: FindOnPage('text-to-find'); return false;" value="Искать"/>
+<br/><i>Введите слово или фразу для поиска.</i>
+</p>
+<div class="cs2">
+</div>
+<div class="pervirg">
+</div>
+<h2><font color="blue">
+<p class="italic" align="center">
+Илья "meraines" Иевлев.<br> 21 год.<br> Роль: Капитан.<br>
+<a target="str3" href="https://vk.com/vsauesports?w=wall-186741703_329%2Fall" style="color: blue">Биография</a><br>
+<a target="str3" href="https://voronezhesports.ru/" style="color: blue">Рейтинг игроков Воронежской области</a>
+<hr width="450" color="blue" align="center">
+</p>
+<div class="vtirg">
+</div>
+<p class="italic" align="center">
+Андрей "R1N1TOSHI" Жеребной.<br> 21 год.<br> Роль: Снайпер.<br>
+<a target="str3" href="https://vk.com/vsauesports?w=wall-186741703_333%2Fall" style="color: blue">Биография</a><br>
+<a target="str3" href="https://voronezhesports.ru/" style="color: blue">Рейтинг игроков Воронежской области</a>
+<hr width="450" color="blue" align="center">
+</p>
+<div class="trirg">
+</div>
+<p class="italic" align="center">
+Евгений "KENZ" Квятковский.<br> 23 года.<br> Роль: Стрелок.<br>
+<a target="str3" href="https://vk.com/vsauesports?w=wall-186741703_339%2Fall" style="color: blue">Биография</a><br>
+<a target="str3" href="https://voronezhesports.ru/" style="color: blue">Рейтинг игроков Воронежской области</a>
+<hr width="450" color="blue" align="center">
+</p>
+<div class="chtirg">
+</div>
+<p class="italic" align="center">
+Владислав "Se1s1ro" Кривобородов.<br> 20 лет.<br> Роль: Стрелок.<br>
+<a target="str3" href="https://vk.com/vsauesports?w=wall-186741703_342%2Fall" style="color: blue">Биография</a><br>
+<a target="str3" href="https://voronezhesports.ru/" style="color: blue">Рейтинг игроков Воронежской области</a>
+<hr width="450" color="blue" align="center">
+</p>
+<div class="ptirg">
+</div>
+<p class="italic" align="center">
+Руслан "B1east" Лунев.<br> 21 год.<br> Роль: Стрелок.<br>
+<a target="str3" href="https://vk.com/vsauesports?w=wall-186741703_352%2Fall" style="color: blue">Биография</a><br>
+<a target="str3" href="https://voronezhesports.ru/" style="color: blue">Рейтинг игроков Воронежской области</a>
+<hr width="450" color="blue" align="center">
+<div class="dota2">
+</div>
+<p class="italic" align="center">
+Ищем игроков в дисциплину Dota2
+<hr width="450" color="blue" align="center">
+</p></h2></font>
+<P align="center">
+<div class="vsaue2">
+</div>
+</body>
+
+</html>
